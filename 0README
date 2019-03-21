@@ -1,0 +1,46 @@
+This directory contains an image classification code written in
+Python using the Keras library. The source code provides details
+on the algorithm used. The dataset used by the code is the
+Oxford-IIIT Pet Dataset taken from
+
+http://www.robots.ox.ac.uk/~vgg/data/pets/
+
+and used under the Creative Commons Attribution-ShareAlike 4.0
+International License as detailed on the website. Original data
+is published in the following proceedings:
+
+O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar
+"Cats and Dogs"
+IEEE Conference on Computer Vision and Pattern Recognition, 2012
+
+The database is not included in the GitHub release of this code.
+If you want to use the code with this database, please do the following:
+
+1) download and extract the file
+http://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz
+
+2) within the "images" directory, run the "organize.script"
+file to sort the images into subfolders; this is needed for
+the python code to work as intended
+
+3) edit TL_DNN.py in the python_src directory as desired,
+mainly choosing a base network in the SETUP SECTION and
+setting the number of epochs in the parameter numepochs
+
+4) run the Python code
+
+The supplied reference output in directory python_src was
+produced on hyperthreaded CPU cores in Anaconda Python with:
+
+- Python 3.6
+- Keras 2.2.4
+- TensorFlow 1.12
+- pillow 5.4.1
+- numpy 1.16.2
+- matplotlib 3.0.2
+- pandas 0.24.1
+
+The code is likely to work with earlier versions of the above but this
+was not tested. Likewise, training should be much faster on GPU, but
+this was also not tested.
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+# The following files appear to be corrupted and will be skipped:
+rm -f Egyptian_Mau_177.jpg
+rm -f Egyptian_Mau_191.jpg
+rm -f Egyptian_Mau_139.jpg
+rm -f Abyssinian_34.jpg
+rm -f Egyptian_Mau_145.jpg
+rm -f Egyptian_Mau_167.jpg
+# The images are sorted into subdirectories corresponding to the classes:
+for i in Abyssinian american_bulldog american_pit_bull_terrier basset_hound beagle Bengal Birman Bombay boxer British_Shorthair chihuahua Egyptian_Mau english_cocker_spaniel english_setter german_shorthaired great_pyrenees havanese japanese_chin keeshond leonberger Maine_Coon miniature_pinscher newfoundland Persian pomeranian pug Ragdoll Russian_Blue saint_bernard samoyed scottish_terrier shiba_inu Siamese Sphynx staffordshire_bull_terrier wheaten_terrier yorkshire_terrier; do
+ mkdir $i
+ mv $i*.jpg $i/
+done
+# We do not use the matlab files that come with the database:
+rm -f *.mat

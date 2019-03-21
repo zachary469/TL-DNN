@@ -1,0 +1,32 @@
+set term postscript landscape enhanced color dashlength 2 22
+# Comment out the following line if using pre-5.0 gnuplot:
+set colors classic
+
+set xtics 5
+
+set xlabel 'Epoch'
+
+set key top left noautotitle opaque
+
+set ylabel 'Loss'
+set out 'Loss_2L.eps'
+plot 'Metrics_2L.dat' u 1:2 w l title 'DenseNet-2L Training','Metrics_2L.dat' u 1:6 w l title 'MobileNet-2L Training','Metrics_2L.dat' u 1:10 w l title 'Xception-2L Training','Metrics_2L.dat' u 1:4 w l title 'DenseNet-2L Validation','Metrics_2L.dat' u 1:8 w l title 'MobileNet-2L Validation','Metrics_2L.dat' u 1:12 w l title 'Xception-2L Validation'
+set out 'Loss_3L.eps'
+plot 'Metrics_3L.dat' u 1:2 w l title 'DenseNet-3L Training','Metrics_3L.dat' u 1:6 w l title 'MobileNet-3L Training','Metrics_3L.dat' u 1:10 w l title 'Xception-3L Training','Metrics_3L.dat' u 1:4 w l title 'DenseNet-3L Validation','Metrics_3L.dat' u 1:8 w l title 'MobileNet-3L Validation','Metrics_3L.dat' u 1:12 w l title 'Xception-3L Validation'
+set out 'Loss_4L.eps'
+plot 'Metrics_4L.dat' u 1:2 w l title 'DenseNet-4L Training','Metrics_4L.dat' u 1:6 w l title 'MobileNet-4L Training','Metrics_4L.dat' u 1:10 w l title 'Xception-4L Training','Metrics_4L.dat' u 1:4 w l title 'DenseNet-4L Validation','Metrics_4L.dat' u 1:8 w l title 'MobileNet-4L Validation','Metrics_4L.dat' u 1:12 w l title 'Xception-4L Validation'
+set out 'Loss_5L.eps'
+plot 'Metrics_5L.dat' u 1:2 w l title 'DenseNet-5L Training','Metrics_5L.dat' u 1:6 w l title 'MobileNet-5L Training','Metrics_5L.dat' u 1:10 w l title 'Xception-5L Training','Metrics_5L.dat' u 1:4 w l title 'DenseNet-5L Validation','Metrics_5L.dat' u 1:8 w l title 'MobileNet-5L Validation','Metrics_5L.dat' u 1:12 w l title 'Xception-5L Validation'
+
+set key bottom right noautotitle opaque
+
+set ylabel 'Accuracy'
+set out 'Accu_2L.eps'
+plot 'Metrics_2L.dat' u 1:3 w l title 'DenseNet-2L Training','Metrics_2L.dat' u 1:7 w l title 'MobileNet-2L Training','Metrics_2L.dat' u 1:11 w l title 'Xception-2L Training', 'Metrics_2L.dat' u 1:5 w l title 'DenseNet-2L Validation', 'Metrics_2L.dat' u 1:9 w l title 'MobileNet-2L Validation', 'Metrics_2L.dat' u 1:13 w l title 'Xception-2L Validation'
+set out 'Accu_3L.eps'
+plot 'Metrics_3L.dat' u 1:3 w l title 'DenseNet-3L Training','Metrics_3L.dat' u 1:7 w l title 'MobileNet-3L Training','Metrics_3L.dat' u 1:11 w l title 'Xception-3L Training','Metrics_3L.dat' u 1:5 w l title 'DenseNet-3L Validation','Metrics_3L.dat' u 1:9 w l title 'MobileNet-3L Validation','Metrics_3L.dat' u 1:13 w l title 'Xception-3L Validation'
+set out 'Accu_4L.eps'
+plot 'Metrics_4L.dat' u 1:3 w l title 'DenseNet-4L Training','Metrics_4L.dat' u 1:7 w l title 'MobileNet-4L Training','Metrics_4L.dat' u 1:11 w l title 'Xception-4L Training','Metrics_4L.dat' u 1:5 w l title 'DenseNet-4L Validation','Metrics_4L.dat' u 1:9 w l title 'MobileNet-4L Validation','Metrics_4L.dat' u 1:13 w l title 'Xception-4L Validation'
+set out 'Accu_5L.eps'
+plot 'Metrics_5L.dat' u 1:3 w l title 'DenseNet-5L Training','Metrics_5L.dat' u 1:7 w l title 'MobileNet-5L Training','Metrics_5L.dat' u 1:11 w l title 'Xception-5L Training','Metrics_5L.dat' u 1:5 w l title 'DenseNet-5L Validation','Metrics_5L.dat' u 1:9 w l title 'MobileNet-5L Validation','Metrics_5L.dat' u 1:13 w l title 'Xception-5L Validation'
+
